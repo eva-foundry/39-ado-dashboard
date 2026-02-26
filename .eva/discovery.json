@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "schema": "eva.discovery.v2",
+    "generated_at": "2026-02-25T19:19:25.072Z",
+    "repo": "C:\\AICOE\\eva-foundation\\39-ado-dashboard"
+  },
+  "project": null,
+  "planned": {
+    "epic": {
+      "title": "39-ado-dashboard — EVA ADO Dashboard",
+      "source": "README.md"
+    },
+    "features": [
+      {
+        "id": "F39-01",
+        "title": "Sprint Plan",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02",
+        "title": "ADO Setup Checklist (do once)",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-03",
+        "title": "Environment Variables Needed",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04",
+        "title": "31-eva-faces Integration Checklist",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-05",
+        "title": "Relationship to eva-faces",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-DASHBOARD",
+        "title": "DASHBOARD API",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-SUMMARY",
+        "title": "SUMMARY API",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-UI",
+        "title": "UI Pages",
+        "source": "veritas-plan.json"
+      }
+    ],
+    "stories": [
+      {
+        "id": "F39-01-001",
+        "title": "Sprint 1 ? Backend + APIM gateway *(blocked on WI-7 deploy)*",
+        "feature_id": "F39-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-01-002",
+        "title": "Sprint 2 ? EVA Home page *(can start in parallel with Sprint 1)*",
+        "feature_id": "F39-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-01-003",
+        "title": "Sprint 3 ? Sprint Board page",
+        "feature_id": "F39-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-01-004",
+        "title": "Sprint 4 ? Velocity + entity tags",
+        "feature_id": "F39-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-01-005",
+        "title": "Milestone backlog (post-Sprint 4)",
+        "feature_id": "F39-01",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-001",
+        "title": "Create Feature `EVA ADO Dashboard` under Epic id=4 in ADO",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-002",
+        "title": "Create WI-0 through WI-6 as User Stories",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-003",
+        "title": "Set sprint assignments per table above",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-004",
+        "title": "Link WI-1 ? WI-7 (Blocked By)",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-005",
+        "title": "Set `ADO_EPIC_ID=4` in `33-eva-brain-v2` `.env`",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-006",
+        "title": "Set `ADO_PAT`, `ADO_ORG_URL`, `ADO_PROJECT` in brain `.env`",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-02-007",
+        "title": "Create Cosmos container `scrum-cache` (see Sprint 1 setup above)",
+        "feature_id": "F39-02",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-001",
+        "title": "Build `EVAHomePage` per epic spec (route `/`)",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-002",
+        "title": "Build `SprintBoardPage` per epic spec (route `/devops/sprint`)",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-003",
+        "title": "Add \"Sprint Board\" to sidebar nav (role guard: `viewer` and above)",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-004",
+        "title": "Wire `userRole`, `userName`, `defaultLocale` from eva-faces auth context",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-005",
+        "title": "Confirm CORS / auth headers flow through APIM for `/v1/scrum/*`",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-04-006",
+        "title": "Create ADO WIs FACES-WI-A, FACES-WI-B, FACES-WI-C under eva-faces Feature",
+        "feature_id": "F39-04",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-DASHBOARD-001",
+        "title": "GET /dashboard",
+        "feature_id": "F39-DASHBOARD",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-DASHBOARD-001",
+        "title": "GET /dashboard",
+        "feature_id": "F39-DASHBOARD",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-SUMMARY-001",
+        "title": "GET /summary",
+        "feature_id": "F39-SUMMARY",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-SUMMARY-001",
+        "title": "GET /summary",
+        "feature_id": "F39-SUMMARY",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-UI-001",
+        "title": "EVAHOMEPAGE page",
+        "feature_id": "F39-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-UI-002",
+        "title": "SPRINTBOARDP page",
+        "feature_id": "F39-UI",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-UI-001",
+        "title": "EVAHOMEPAGE page",
+        "feature_id": "F39-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F39-UI-002",
+        "title": "SPRINTBOARDP page",
+        "feature_id": "F39-UI",
+        "done": false,
+        "source": "veritas-plan.json"
+      }
+    ],
+    "tasks": [],
+    "acceptance": [
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "The component renders without errors in 31-eva-faces (portal-face)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Live API data flows from APIM -> 33-eva-brain-v2 -> Cosmos -> component (or mock is documented as temporary)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Bilingual support: EN and FR labels render correctly",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Role guard: component is visible only to correct `userRole` (viewer+)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`vitest run` exits 0, coverage >=70%",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`tsc --noEmit` exits 0 (zero TypeScript errors)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`jest-axe` reports 0 accessibility violations",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "No `console.error` in test output",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Screen registered in `37-data-model` with correct `app`, `route`, `api_calls`, `wbs_id`",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "All called endpoints have `status=implemented` in data model",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`POST /model/admin/commit` returns `violation_count=0`",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Story ID tagged in source file (`// EVA-STORY: F39-XX-XXX`)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`STORY F39-XX-XXX: 100%` entry added to STATUS.md (veritas compatibility)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "PLAN.md story updated to `[DONE]` with completion date",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "veritas MTI >= 70 (`eva audit --repo . --warn-only` exits 0)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "brain /v1/scrum/dashboard + Cosmos cache (WI-0)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "APIM route /v1/scrum/* registration -- brain/v1 API in marco-sandbox-apim; smoke [PASS]",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "EVAHomePage.tsx static tile grid (WI-2) -- 9 vitest tests, jest-axe 0 violations",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Live sprint badges (WI-3) -- DONE 2026-02-26 Session 10; .env.local created; scrumApi.ts headers fixed (X-Actor-OID, X-Correlation-ID, X-Acting-Session); APIM smoke [PASS] 200; vitest 43/43 [PASS]",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "SprintBoardPage.tsx skeleton + API (WI-4) -- 10 vitest tests, jest-axe 0 violations",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "WI detail drawer + feature rollup (WI-5) -- scaffold complete",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Entity tags + velocity charts (WI-6) -- scaffold complete; live data after APIM/brain",
+        "source": "ACCEPTANCE.md"
+      }
+    ],
+    "declared_status": {
+      "STORY:F39-01-001": "100%",
+      "STORY:F39-01-002": "100%",
+      "STORY:F39-01-003": "100%",
+      "STORY:F39-01-004": "0%",
+      "STORY:F39-01-005": "0%",
+      "STORY:F39-02-001": "0%",
+      "STORY:F39-02-002": "0%",
+      "STORY:F39-02-003": "0%",
+      "STORY:F39-02-004": "0%",
+      "STORY:F39-02-005": "0%",
+      "STORY:F39-02-006": "0%",
+      "STORY:F39-02-007": "100%",
+      "STORY:F39-04-001": "100%",
+      "STORY:F39-04-002": "100%",
+      "STORY:F39-04-003": "100%",
+      "STORY:F39-04-004": "100%",
+      "STORY:F39-04-005": "100%",
+      "STORY:F39-04-006": "100%",
+      "STORY:F39-DASHBOARD-001": "100%",
+      "STORY:F39-SUMMARY-001": "100%",
+      "STORY:F39-UI-001": "100%",
+      "STORY:F39-UI-002": "100%"
+    }
+  },
+  "actual": {
+    "artifacts": [
+      {
+        "path": ".env.example",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "ACCEPTANCE.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "ado-artifacts.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "ado-import.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "ADO-WORK-ITEMS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "DEPENDENCIES.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "package-lock.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "package.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md.bak",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "PROJECT-39.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "STATUS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "test-run1.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "tsconfig.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "vite.config.ts",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": ".github/copilot-instructions.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/Create-ScrumCacheContainer.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/index.ts",
+        "type": "code",
+        "story_tags": [
+          "F39-01-001",
+          "F39-01-002",
+          "F39-01-003",
+          "F39-01-004",
+          "F39-01-005",
+          "F39-02-001",
+          "F39-02-002",
+          "F39-02-003",
+          "F39-02-004",
+          "F39-02-005",
+          "F39-02-006",
+          "F39-02-007",
+          "F39-04-001",
+          "F39-04-002",
+          "F39-04-003",
+          "F39-04-004",
+          "F39-04-005",
+          "F39-04-006",
+          "F39-DASHBOARD-001",
+          "F39-SUMMARY-001",
+          "F39-UI-001",
+          "F39-UI-002"
+        ]
+      },
+      {
+        "path": "src/test-setup.ts",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": ".github/copilot-skills/00-skill-index.skill.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "src/api/scrumApi.ts",
+        "type": "code",
+        "story_tags": [
+          "F39-DASHBOARD-001",
+          "F39-SUMMARY-001",
+          "F39-01-001"
+        ]
+      },
+      {
+        "path": "src/components/FeatureSection.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/NavHeader.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/ProductTile.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/ProductTileGrid.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/ProjectFilterBar.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/RecentSprintSummaryBar.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/SprintBadge.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/SprintSelector.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/VelocityPanel.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/WICard.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/components/WIDetailDrawer.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/pages/EVAHomePage.test.tsx",
+        "type": "test",
+        "story_tags": [
+          "F39-04-001",
+          "F39-UI-001",
+          "F39-01-002"
+        ],
+        "is_test": true
+      },
+      {
+        "path": "src/pages/EVAHomePage.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/pages/SprintBoardPage.test.tsx",
+        "type": "test",
+        "story_tags": [
+          "F39-04-002",
+          "F39-UI-002",
+          "F39-01-003"
+        ],
+        "is_test": true
+      },
+      {
+        "path": "src/pages/SprintBoardPage.tsx",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "src/types/scrum.ts",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "eva-brain/app/routes/scrum.py",
+        "type": "code",
+        "story_tags": []
+      }
+    ],
+    "story_artifact_map": {
+      "F39-01-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/api/scrumApi.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-01-001"
+            ]
+          }
+        ]
+      },
+      "F39-01-002": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/EVAHomePage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-001",
+              "F39-UI-001",
+              "F39-01-002"
+            ],
+            "is_test": true
+          }
+        ]
+      },
+      "F39-01-003": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/SprintBoardPage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-002",
+              "F39-UI-002",
+              "F39-01-003"
+            ],
+            "is_test": true
+          }
+        ]
+      },
+      "F39-01-004": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-01-005": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-002": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-003": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-004": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-005": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-006": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-02-007": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-04-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/EVAHomePage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-001",
+              "F39-UI-001",
+              "F39-01-002"
+            ],
+            "is_test": true
+          }
+        ]
+      },
+      "F39-04-002": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/SprintBoardPage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-002",
+              "F39-UI-002",
+              "F39-01-003"
+            ],
+            "is_test": true
+          }
+        ]
+      },
+      "F39-04-003": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-04-004": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-04-005": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-04-006": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          }
+        ]
+      },
+      "F39-DASHBOARD-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/api/scrumApi.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-01-001"
+            ]
+          }
+        ]
+      },
+      "F39-SUMMARY-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/api/scrumApi.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-01-001"
+            ]
+          }
+        ]
+      },
+      "F39-UI-001": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/EVAHomePage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-001",
+              "F39-UI-001",
+              "F39-01-002"
+            ],
+            "is_test": true
+          }
+        ]
+      },
+      "F39-UI-002": {
+        "artifacts": [
+          {
+            "path": "src/index.ts",
+            "type": "code",
+            "story_tags": [
+              "F39-01-001",
+              "F39-01-002",
+              "F39-01-003",
+              "F39-01-004",
+              "F39-01-005",
+              "F39-02-001",
+              "F39-02-002",
+              "F39-02-003",
+              "F39-02-004",
+              "F39-02-005",
+              "F39-02-006",
+              "F39-02-007",
+              "F39-04-001",
+              "F39-04-002",
+              "F39-04-003",
+              "F39-04-004",
+              "F39-04-005",
+              "F39-04-006",
+              "F39-DASHBOARD-001",
+              "F39-SUMMARY-001",
+              "F39-UI-001",
+              "F39-UI-002"
+            ]
+          },
+          {
+            "path": "src/pages/SprintBoardPage.test.tsx",
+            "type": "test",
+            "story_tags": [
+              "F39-04-002",
+              "F39-UI-002",
+              "F39-01-003"
+            ],
+            "is_test": true
+          }
+        ]
+      }
+    },
+    "commit_evidence_map": {},
+    "code_complexity": null
+  }
+}

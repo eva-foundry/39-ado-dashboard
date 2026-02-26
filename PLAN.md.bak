@@ -1,0 +1,141 @@
+# PLAN.md — 39-ado-dashboard
+
+**Project:** EVA ADO Dashboard  
+**Last updated:** 2026-02-20 10:55 ET  
+**Source:** Migrated from `38-ado-poc/PROJECT-39.md`
+
+---
+
+## Sprint Plan
+
+### Sprint 1 — Backend + APIM gateway *(blocked on WI-7 deploy)*
+
+| # | Task | Owner | Status | DoD |
+|---|------|-------|--------|-----|
+| WI-0 | `GET /v1/scrum/dashboard` endpoint + Cosmos cache in `33-eva-brain-v2` | brain team | 🔲 file created, needs deploy | Endpoint returns shaped ADO data; Cosmos `scrum-cache` TTL=24 h; unit tests pass |
+| WI-1 | APIM route registration for `/v1/scrum/dashboard` + `/v1/scrum/summary` | apim team | 🔲 blocked on WI-7 | Routes live in `marco-sandbox-apim`; OAuth enforced; smoke test HTTP 200 |
+
+**Blockers:**
+- WI-7 (eva-brain deployed to sandbox) must be `Closed` before WI-0 endpoint can be tested against live Cosmos
+- Cosmos container `scrum-cache` needs to be created in sandbox with partition key `/sprint_key` and TTL enabled
+
+**Cosmos setup (one-time, manual until IaC):**
+```bash
+# In azure portal or via az cli:
+az cosmosdb sql container create \
+  --account-name <cosmos-account> \
+  --database-name eva-foundation \
+  --name scrum-cache \
+  --partition-key-path /sprint_key \
+  --default-ttl 86400
+```
+
+---
+
+### Sprint 2 — EVA Home page *(can start in parallel with Sprint 1)*
+
+| # | Task | Status | DoD |
+|---|------|--------|-----|
+| WI-2 | `EVAHomePage.tsx` — 23-product tile grid, static | 🔲 scaffold done | Renders all 23 tiles; GC Design System; bilingual EN/FR; WCAG 2.1 AA |
+| WI-3 | Live sprint badges via `GET /v1/scrum/summary` | 🔲 blocked on WI-1 | Each tile with `adoProject != null` shows live badge; graceful degradation if API fails |
+
+**Notes:**
+- WI-2 can be developed and tested with mocked `SprintSummary[]` data while WI-1 is pending
+- `.env.example` has all required VITE_ vars
+- 31-eva-faces must add route `/` → `EVAHomePage` and sidebar entry
+
+---
+
+### Sprint 3 — Sprint Board page
+
+| # | Task | Status | DoD |
+|---|------|--------|-----|
+| WI-4 | `SprintBoardPage.tsx` — skeleton + API integration | 🔲 scaffold done | Sprint WI list renders; sprint selector + project filter work; loading/error states handled |
+| WI-5 | WI detail drawer + Epic→Feature→WI rollup | 🔲 scaffold done | Drawer opens on WI click; DoD, tests, coverage, close date visible; ESC closes |
+
+**Notes:**
+- Needs `31-eva-faces` sidebar nav entry "Sprint Board" (role guard: `viewer` and above)
+- WI-5 entity-tag section deferred until `37-data-model` sprint-context.json ready (M2)
+
+---
+
+### Sprint 4 — Velocity + entity tags
+
+| # | Task | Status | DoD |
+|---|------|--------|-----|
+| WI-6 | Data model entity tags + velocity sparklines | 🔲 scaffold done | Entity links in drawer; sparklines + accessible data table render |
+
+**Blocked by:** `37-data-model` entity registry (M2 milestone)
+
+---
+
+### Milestone backlog (post-Sprint 4)
+
+| Item | Sprint | Depends on |
+|------|--------|------------|
+| US-8: FinOps cost column in Sprint Board | M4 | ATRIB-0 (APIM import complete), `14-az-finops` pipeline live |
+| All 18+ eva-foundation Epics registered in ADO | Ongoing | Per-project ADO Feature creation |
+| ADO runner dispatch from 38-ado-poc | M1 | `29-foundry` skill versioning complete |
+
+---
+
+## ADO Setup Checklist (do once)
+
+- [ ] Create Feature `EVA ADO Dashboard` under Epic id=4 in ADO
+- [ ] Create WI-0 through WI-6 as User Stories
+- [ ] Set sprint assignments per table above
+- [ ] Link WI-1 → WI-7 (Blocked By)
+- [ ] Set `ADO_EPIC_ID=4` in `33-eva-brain-v2` `.env`
+- [ ] Set `ADO_PAT`, `ADO_ORG_URL`, `ADO_PROJECT` in brain `.env`
+- [ ] Create Cosmos container `scrum-cache` (see Sprint 1 setup above)
+
+---
+
+## Environment Variables Needed
+
+| Variable | Where | Value |
+|----------|-------|-------|
+| `VITE_APIM_BASE_URL` | `39-ado-dashboard/.env` | `https://marco-sandbox-apim.azure-api.net` |
+| `VITE_APIM_SUBSCRIPTION_KEY` | `39-ado-dashboard/.env` | APIM subscription key |
+| `ADO_ORG_URL` | `33-eva-brain-v2/.env` | `https://dev.azure.com/GCDigital` |
+| `ADO_PROJECT` | `33-eva-brain-v2/.env` | `EVA` |
+| `ADO_PAT` | `33-eva-brain-v2/.env` | Service principal PAT (rotate monthly) |
+| `ADO_EPIC_ID` | `33-eva-brain-v2/.env` | `4` |
+
+---
+
+## 31-eva-faces Integration Checklist
+
+`31-eva-faces` builds screens from the epic spec at [`docs/epics/eva-ado-dashboard.epic.yaml`](../31-eva-faces/docs/epics/eva-ado-dashboard.epic.yaml). No package import required.
+
+- [ ] Build `EVAHomePage` per epic spec (route `/`)
+- [ ] Build `SprintBoardPage` per epic spec (route `/devops/sprint`)
+- [ ] Add "Sprint Board" to sidebar nav (role guard: `viewer` and above)
+- [ ] Wire `userRole`, `userName`, `defaultLocale` from eva-faces auth context
+- [ ] Confirm CORS / auth headers flow through APIM for `/v1/scrum/*`
+- [ ] Create ADO WIs FACES-WI-A, FACES-WI-B, FACES-WI-C under eva-faces Feature
+
+---
+
+## Relationship to eva-faces
+
+**Architecture decision (2026-02-20):** `39-ado-dashboard` does NOT export React components to `31-eva-faces`. There is **no package import in either direction**.
+
+Instead, `39-ado-dashboard` publishes a declarative epic spec:
+```
+31-eva-faces/docs/epics/eva-ado-dashboard.epic.yaml
+```
+
+`31-eva-faces` reads that YAML and builds the screens independently. `39-ado-dashboard` owns the API contract, types, and backend. The YAML is the interface.
+
+| Responsibility | Owner | ADO Feature |
+|---------------|-------|-------------|
+| Epic spec (screens, UX, API contract, i18n) | `39-ado-dashboard` | EVA ADO Dashboard |
+| Screen implementation (routes, components, auth wiring, sidebar) | `31-eva-faces` | EVA Faces |
+| Backend data, Cosmos cache | `33-eva-brain-v2` | EVA Brain v2 |
+| Gateway, auth enforcement | `17-apim` | EVA APIM |
+
+**eva-faces ADO WIs to create (from epic YAML):**
+- `FACES-WI-A` — Route `/` → EVAHomePage (Sprint-2)
+- `FACES-WI-B` — Route `/devops/sprint` → SprintBoardPage + sidebar (Sprint-3)
+- `FACES-WI-C` — Auth context wiring for ADO dashboard pages (Sprint-2)

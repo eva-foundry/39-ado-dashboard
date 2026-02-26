@@ -1,0 +1,251 @@
+{
+  "schema": "eva.veritas-plan.v1",
+  "generated_at": "2026-02-25T06:37:41.459Z",
+  "generated_from": [
+    "PLAN.md"
+  ],
+  "format_detected": "veritas",
+  "prefix": "F39",
+  "features": [
+    {
+      "id": "F39-01",
+      "title": "Sprint Plan",
+      "source_heading": "## Feature: Sprint Plan [ID=F39-01]",
+      "stories": [
+        {
+          "id": "F39-01-001",
+          "title": "Sprint 1 ? Backend + APIM gateway *(blocked on WI-7 deploy)*",
+          "feature_id": "F39-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-01-002",
+          "title": "Sprint 2 ? EVA Home page *(can start in parallel with Sprint 1)*",
+          "feature_id": "F39-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-01-003",
+          "title": "Sprint 3 ? Sprint Board page",
+          "feature_id": "F39-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-01-004",
+          "title": "Sprint 4 ? Velocity + entity tags",
+          "feature_id": "F39-01",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-01-005",
+          "title": "Milestone backlog (post-Sprint 4)",
+          "feature_id": "F39-01",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F39-02",
+      "title": "ADO Setup Checklist (do once)",
+      "source_heading": "## Feature: ADO Setup Checklist (do once) [ID=F39-02]",
+      "stories": [
+        {
+          "id": "F39-02-001",
+          "title": "Create Feature `EVA ADO Dashboard` under Epic id=4 in ADO",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-002",
+          "title": "Create WI-0 through WI-6 as User Stories",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-003",
+          "title": "Set sprint assignments per table above",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-004",
+          "title": "Link WI-1 ? WI-7 (Blocked By)",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-005",
+          "title": "Set `ADO_EPIC_ID=4` in `33-eva-brain-v2` `.env`",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-006",
+          "title": "Set `ADO_PAT`, `ADO_ORG_URL`, `ADO_PROJECT` in brain `.env`",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-02-007",
+          "title": "Create Cosmos container `scrum-cache` (see Sprint 1 setup above)",
+          "feature_id": "F39-02",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F39-03",
+      "title": "Environment Variables Needed",
+      "source_heading": "## Feature: Environment Variables Needed [ID=F39-03]",
+      "stories": []
+    },
+    {
+      "id": "F39-04",
+      "title": "31-eva-faces Integration Checklist",
+      "source_heading": "## Feature: 31-eva-faces Integration Checklist [ID=F39-04]",
+      "stories": [
+        {
+          "id": "F39-04-001",
+          "title": "Build `EVAHomePage` per epic spec (route `/`)",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-04-002",
+          "title": "Build `SprintBoardPage` per epic spec (route `/devops/sprint`)",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-04-003",
+          "title": "Add \"Sprint Board\" to sidebar nav (role guard: `viewer` and above)",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-04-004",
+          "title": "Wire `userRole`, `userName`, `defaultLocale` from eva-faces auth context",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-04-005",
+          "title": "Confirm CORS / auth headers flow through APIM for `/v1/scrum/*`",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-04-006",
+          "title": "Create ADO WIs FACES-WI-A, FACES-WI-B, FACES-WI-C under eva-faces Feature",
+          "feature_id": "F39-04",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F39-05",
+      "title": "Relationship to eva-faces",
+      "source_heading": "## Feature: Relationship to eva-faces [ID=F39-05]",
+      "stories": []
+    },
+    {
+      "id": "F39-DASHBOARD",
+      "title": "DASHBOARD API",
+      "source_heading": "## Feature: DASHBOARD API [ID=F39-DASHBOARD]",
+      "stories": [
+        {
+          "id": "F39-DASHBOARD-001",
+          "title": "GET /dashboard",
+          "feature_id": "F39-DASHBOARD",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-DASHBOARD-001",
+          "title": "GET /dashboard",
+          "feature_id": "F39-DASHBOARD",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F39-SUMMARY",
+      "title": "SUMMARY API",
+      "source_heading": "## Feature: SUMMARY API [ID=F39-SUMMARY]",
+      "stories": [
+        {
+          "id": "F39-SUMMARY-001",
+          "title": "GET /summary",
+          "feature_id": "F39-SUMMARY",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-SUMMARY-001",
+          "title": "GET /summary",
+          "feature_id": "F39-SUMMARY",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F39-UI",
+      "title": "UI Pages",
+      "source_heading": "## Feature: UI Pages [ID=F39-UI]",
+      "stories": [
+        {
+          "id": "F39-UI-001",
+          "title": "EVAHOMEPAGE page",
+          "feature_id": "F39-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-UI-002",
+          "title": "SPRINTBOARDP page",
+          "feature_id": "F39-UI",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F39-UI-001",
+          "title": "EVAHOMEPAGE page",
+          "feature_id": "F39-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        },
+        {
+          "id": "F39-UI-002",
+          "title": "SPRINTBOARDP page",
+          "feature_id": "F39-UI",
+          "done": false,
+          "source": "code-structure",
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

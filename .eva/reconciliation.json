@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "schema": "eva.reconciliation.v2",
+    "generated_at": "2026-02-25T19:19:25.088Z",
+    "repo": "C:\\AICOE\\eva-foundation\\39-ado-dashboard",
+    "discovery_path": "C:\\AICOE\\eva-foundation\\39-ado-dashboard\\.eva\\discovery.json"
+  },
+  "coverage": {
+    "stories_total": 26,
+    "stories_with_artifacts": 26,
+    "stories_with_evidence": 8,
+    "consistency_score": 1
+  },
+  "features": [
+    {
+      "id": "F39-01",
+      "title": "Sprint Plan",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 2,
+      "consistency_score": 1,
+      "mti": 88,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-02",
+      "title": "ADO Setup Checklist (do once)",
+      "story_count": 7,
+      "stories_with_artifacts": 7,
+      "stories_with_evidence": 0,
+      "consistency_score": 1,
+      "mti": 80,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-03",
+      "title": "Environment Variables Needed",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-04",
+      "title": "31-eva-faces Integration Checklist",
+      "story_count": 6,
+      "stories_with_artifacts": 6,
+      "stories_with_evidence": 2,
+      "consistency_score": 1,
+      "mti": 87,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-05",
+      "title": "Relationship to eva-faces",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-DASHBOARD",
+      "title": "DASHBOARD API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 1,
+      "mti": 80,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-SUMMARY",
+      "title": "SUMMARY API",
+      "story_count": 2,
+      "stories_with_artifacts": 2,
+      "stories_with_evidence": 0,
+      "consistency_score": 1,
+      "mti": 80,
+      "gap_count": 0
+    },
+    {
+      "id": "F39-UI",
+      "title": "UI Pages",
+      "story_count": 4,
+      "stories_with_artifacts": 4,
+      "stories_with_evidence": 4,
+      "consistency_score": 1,
+      "mti": 100,
+      "gap_count": 0
+    }
+  ],
+  "gaps": []
+}

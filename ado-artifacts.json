@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-02-21T00:00:00",
+  "ado_org": "https://dev.azure.com/marcopresta",
+  "ado_project": "eva-poc",
+  "github_repo": "eva-foundry/39-ado-dashboard",
+  "project_maturity": "poc",
+
+  "epic": {
+    "skip_if_id_exists": null,
+    "type": "Epic",
+    "title": "EVA ADO Dashboard",
+    "description": "EVA Portal home page (23+ product tile grid, live ADO sprint badges) and ADO embedded sprint views (/devops/sprint) delivered as React components into 31-eva-faces. Data sourced from ADO REST via ev-brain APIM route /v1/scrum/dashboard. No ADO login required for viewers. Spec author repo — 31-eva-faces is the implementer.",
+    "tags": "ado-dashboard;39",
+    "area_path": "eva-poc"
+  },
+
+  "features": [
+    {
+      "id_hint": "dash-spec",
+      "type": "Feature",
+      "title": "Reference Components & Type Contract",
+      "description": "scrum.ts canonical types, scrumApi.ts APIM client, reference EVAHomePage and SprintBoardPage. Epic YAML interface contract for 31-eva-faces. GC Design System + bilingual.",
+      "tags": "ado-dashboard;dash-spec",
+      "parent": "epic"
+    },
+    {
+      "id_hint": "dash-apim-route",
+      "type": "Feature",
+      "title": "APIM Data Route (/v1/scrum/dashboard)",
+      "description": "eva-brain endpoint GET /v1/scrum/dashboard calling ADO REST, shaping response, caching to Cosmos (TTL 24h). APIM registers route. Daily refresh via Logic App or scheduled Function.",
+      "tags": "ado-dashboard;dash-apim-route",
+      "parent": "epic"
+    }
+  ],
+
+  "user_stories": [
+    {
+      "id_hint": "dash-wi-0",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache",
+      "acceptance_criteria": "GET /v1/scrum/dashboard returns features, sprints, WIs, metrics. Response schema matches ScrumDashboardResponse type. Cosmos scrum-cache container stores response with 24h TTL.",
+      "tags": "ado-dashboard;dash-wi-0",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-apim-route",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Depends on WI-7 (eva-brain deployed) and APIM import (Mar 29-30 2026)." }
+    },
+    {
+      "id_hint": "dash-wi-1",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim",
+      "acceptance_criteria": "Route registered in marco-sandbox-apim. Auth: subscription key + AAD token. Rate limiting configured. APIM calls eva-brain /v1/scrum/dashboard. Browser can call APIM without ADO credentials.",
+      "tags": "ado-dashboard;dash-wi-1",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-apim-route",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Depends on DASH-WI-0." }
+    },
+    {
+      "id_hint": "dash-wi-2",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge",
+      "acceptance_criteria": "All reference components in src/components/ and src/pages/. Types in scrum.ts. API client in scrumApi.ts. Epic YAML updated in 31-eva-faces. Mock data fallback when VITE_APIM_BASE_URL empty. WCAG 2.1 AA.",
+      "tags": "ado-dashboard;dash-wi-2",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-spec",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Depends on DASH-WI-1 for live data. Static/mock version can proceed independently." }
+    }
+  ],
+
+  "sprints_needed": [
+    { "name": "Sprint-Backlog", "start_date": null, "finish_date": null }
+  ]
+}

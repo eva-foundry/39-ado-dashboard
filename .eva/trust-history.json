@@ -1,0 +1,44 @@
+{
+  "runs": [
+    {
+      "generated_at": "2026-02-25T03:57:09.623Z",
+      "score": 0
+    },
+    {
+      "generated_at": "2026-02-25T05:23:16.834Z",
+      "score": 0
+    },
+    {
+      "generated_at": "2026-02-25T06:02:27.953Z",
+      "score": 0
+    },
+    {
+      "generated_at": "2026-02-25T06:06:52.466Z",
+      "score": 0
+    },
+    {
+      "generated_at": "2026-02-25T06:20:15.866Z",
+      "score": 0
+    },
+    {
+      "generated_at": "2026-02-25T06:37:42.011Z",
+      "score": 50
+    },
+    {
+      "generated_at": "2026-02-25T18:08:41.886Z",
+      "score": 86
+    },
+    {
+      "generated_at": "2026-02-25T18:14:32.425Z",
+      "score": 86
+    },
+    {
+      "generated_at": "2026-02-25T18:22:07.679Z",
+      "score": 86
+    },
+    {
+      "generated_at": "2026-02-25T19:19:25.096Z",
+      "score": 86
+    }
+  ]
+}
