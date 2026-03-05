@@ -6,7 +6,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import type { WorkItem, VelocityPoint } from "../types/scrum";
-import { fetchScrumDashboard } from "../api/scrumApi";
+import { fetchScrumDashboard, fetchProjectMetricsTrend } from "../api/scrumApi";
 import { NavHeader } from "../components/NavHeader";
 import { SprintSelector } from "../components/SprintSelector";
 import { ProjectFilterBar } from "../components/ProjectFilterBar";
@@ -34,6 +34,55 @@ export const SprintBoardPage: React.FC<SprintBoardPageProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [activeWI, setActiveWI] = useState<WorkItem | null>(null);
   const lastFetchKey = useRef("");
+
+  // Evidence-based velocity (data model API, Session 26)
+  const [evidenceVelocity, setEvidenceVelocity] = useState<VelocityPoint[]>([]);
+  const [velocitySource, setVelocitySource] = useState<"evidence" | "ado">("ado");
+
+  // ─── Fetch evidence velocity when single project selected ─────────────────
+  useEffect(() => {
+    // Only fetch evidence velocity for single-project view
+    if (selectedProject === "all" || !selectedProject) {
+      setEvidenceVelocity([]);
+      setVelocitySource("ado");
+      return;
+    }
+
+    // Map ADO project slug to data model project ID
+    // Example: "brain-v2" → "33-eva-brain-v2"
+    const projectIdMap: Record<string, string> = {
+      "brain-v2": "33-eva-brain-v2",
+      "faces": "31-eva-faces",
+      "agents": "34-eva-agents",
+      "data-model": "37-data-model",
+      "ado-dashboard": "39-ado-dashboard",
+      // Add more mappings as needed
+    };
+
+    const projectId = projectIdMap[selectedProject];
+    if (!projectId) {
+      console.warn(`[SprintBoard] No project ID mapping for ${selectedProject}`);
+      setEvidenceVelocity([]);
+      setVelocitySource("ado");
+      return;
+    }
+
+    fetchProjectMetricsTrend(projectId)
+      .then((data) => {
+        if (data.length > 0) {
+          setEvidenceVelocity(data);
+          setVelocitySource("evidence");
+        } else {
+          setEvidenceVelocity([]);
+          setVelocitySource("ado");
+        }
+      })
+      .catch((e) => {
+        console.error("[SprintBoard] Evidence velocity fetch failed:", e);
+        setEvidenceVelocity([]);
+        setVelocitySource("ado");
+      });
+  }, [selectedProject]);
 
   // ─── Fetch dashboard data when project or sprint filter changes ───────────
   useEffect(() => {
@@ -186,9 +235,29 @@ export const SprintBoardPage: React.FC<SprintBoardPageProps> = ({
         )}
 
         {/* Velocity panel */}
-        {!loading && velocityData.length > 0 && (
+        {!loading && (velocityData.length > 0 || evidenceVelocity.length > 0) && (
           <div style={{ marginTop: "32px" }}>
-            <VelocityPanel data={velocityData} />
+            {/* Data source indicator */}
+            <div style={{ fontSize: "0.75rem", color: "#505a5f", marginBottom: "8px" }}>
+              {velocitySource === "evidence" ? (
+                <>
+                  <span style={{ color: "#00703c", fontWeight: 600 }}>✓ Evidence-based metrics</span> 
+                  {" "}(data model API, {evidenceVelocity.length} sprints)
+                </>
+              ) : (
+                <>
+                  <span style={{ color: "#1d70b8" }}>ADO-derived metrics</span>
+                  {" "}(client-side aggregation, {velocityData.length} sprints)
+                </>
+              )}
+            </div>
+            
+            <VelocityPanel 
+              data={velocitySource === "evidence" && evidenceVelocity.length > 0 
+                ? evidenceVelocity 
+                : velocityData
+              } 
+            />
           </div>
         )}
       </main>
