@@ -1,0 +1,994 @@
+{
+  "meta": {
+    "schema": "eva.export-to-model.v1",
+    "generated_at": "2026-03-08T00:47:21.069Z",
+    "project_id": "39-ado-dashboard",
+    "source_files": [
+      "STATUS.md",
+      "PLAN.md"
+    ],
+    "discovery_path": "C:\\eva-foundry\\eva-foundry\\39-ado-dashboard\\.eva\\discovery.json",
+    "reconciliation_path": "C:\\eva-foundry\\eva-foundry\\39-ado-dashboard\\.eva\\reconciliation.json",
+    "layers_selected": [
+      "wbs",
+      "evidence",
+      "decisions",
+      "risks"
+    ]
+  },
+  "wbs": [
+    {
+      "id": "WBS-39adodashboard",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": null,
+      "label": "Project: 39-ado-dashboard",
+      "level": "epic",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 78,
+      "points_done": 0,
+      "stories_total": 26,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-F01",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "Sprint Plan",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 15,
+      "points_done": 0,
+      "stories_total": 5,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S001",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Sprint 1 ? Backend + APIM gateway *(blocked on WI-7 deploy)*",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-01-001"
+    },
+    {
+      "id": "WBS-S002",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Sprint 2 ? EVA Home page *(can start in parallel with Sprint 1)*",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-01-002"
+    },
+    {
+      "id": "WBS-S003",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Sprint 3 ? Sprint Board page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-01-003"
+    },
+    {
+      "id": "WBS-S004",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Sprint 4 ? Velocity + entity tags",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-01-004"
+    },
+    {
+      "id": "WBS-S005",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F01",
+      "label": "Milestone backlog (post-Sprint 4)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-01-005"
+    },
+    {
+      "id": "WBS-F02",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "ADO Setup Checklist (do once)",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 21,
+      "points_done": 0,
+      "stories_total": 7,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S006",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Create Feature `EVA ADO Dashboard` under Epic id=4 in ADO",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-001"
+    },
+    {
+      "id": "WBS-S007",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Create WI-0 through WI-6 as User Stories",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-002"
+    },
+    {
+      "id": "WBS-S008",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Set sprint assignments per table above",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-003"
+    },
+    {
+      "id": "WBS-S009",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Link WI-1 ? WI-7 (Blocked By)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-004"
+    },
+    {
+      "id": "WBS-S010",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Set `ADO_EPIC_ID=4` in `33-eva-brain-v2` `.env`",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-005"
+    },
+    {
+      "id": "WBS-S011",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Set `ADO_PAT`, `ADO_ORG_URL`, `ADO_PROJECT` in brain `.env`",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-006"
+    },
+    {
+      "id": "WBS-S012",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F02",
+      "label": "Create Cosmos container `scrum-cache` (see Sprint 1 setup above)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-02-007"
+    },
+    {
+      "id": "WBS-F03",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "Environment Variables Needed",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 0,
+      "points_done": 0,
+      "stories_total": 0,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-F04",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "31-eva-faces Integration Checklist",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 18,
+      "points_done": 0,
+      "stories_total": 6,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S013",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Build `EVAHomePage` per epic spec (route `/`)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-001"
+    },
+    {
+      "id": "WBS-S014",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Build `SprintBoardPage` per epic spec (route `/devops/sprint`)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-002"
+    },
+    {
+      "id": "WBS-S015",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Add \"Sprint Board\" to sidebar nav (role guard: `viewer` and above)",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-003"
+    },
+    {
+      "id": "WBS-S016",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Wire `userRole`, `userName`, `defaultLocale` from eva-faces auth context",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-004"
+    },
+    {
+      "id": "WBS-S017",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Confirm CORS / auth headers flow through APIM for `/v1/scrum/*`",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-005"
+    },
+    {
+      "id": "WBS-S018",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F04",
+      "label": "Create ADO WIs FACES-WI-A, FACES-WI-B, FACES-WI-C under eva-faces Feature",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-04-006"
+    },
+    {
+      "id": "WBS-F05",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "Relationship to eva-faces",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 0,
+      "points_done": 0,
+      "stories_total": 0,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-F06",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "DASHBOARD API",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S019",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F06",
+      "label": "GET /dashboard",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-DASHBOARD-001"
+    },
+    {
+      "id": "WBS-S020",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F06",
+      "label": "GET /dashboard",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-DASHBOARD-001"
+    },
+    {
+      "id": "WBS-F07",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "SUMMARY API",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 6,
+      "points_done": 0,
+      "stories_total": 2,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S021",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F07",
+      "label": "GET /summary",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-SUMMARY-001"
+    },
+    {
+      "id": "WBS-S022",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F07",
+      "label": "GET /summary",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-SUMMARY-001"
+    },
+    {
+      "id": "WBS-F08",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-39adodashboard",
+      "label": "UI Pages",
+      "level": "feature",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 12,
+      "points_done": 0,
+      "stories_total": 4,
+      "stories_done": 0
+    },
+    {
+      "id": "WBS-S023",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F08",
+      "label": "EVAHOMEPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-UI-001"
+    },
+    {
+      "id": "WBS-S024",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F08",
+      "label": "SPRINTBOARDP page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-UI-002"
+    },
+    {
+      "id": "WBS-S025",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F08",
+      "label": "EVAHOMEPAGE page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-UI-001"
+    },
+    {
+      "id": "WBS-S026",
+      "project_id": "39-ado-dashboard",
+      "parent_wbs_id": "WBS-F08",
+      "label": "SPRINTBOARDP page",
+      "level": "user_story",
+      "status": "planned",
+      "percent_complete": 0,
+      "points_total": 3,
+      "points_done": 0,
+      "acceptance_criteria": null,
+      "original_story_id": "F39-UI-002"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EVD-39adodashboard-D3-001",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-01-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/api/scrumApi.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-002",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-01-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/EVAHomePage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-003",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-01-003",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/SprintBoardPage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-004",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-01-004",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-005",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-01-005",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-006",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-007",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-002",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-008",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-003",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-009",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-004",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-010",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-005",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-011",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-006",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-012",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-02-007",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-013",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/EVAHomePage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-014",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/SprintBoardPage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-015",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-003",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-016",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-004",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-017",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-005",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-018",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-04-006",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-019",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-DASHBOARD-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/api/scrumApi.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-020",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-SUMMARY-001",
+      "status": "documented",
+      "test_count": 0,
+      "test_passed": 0,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/api/scrumApi.ts",
+          "type": "code",
+          "is_test": false
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-021",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-UI-001",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/EVAHomePage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    },
+    {
+      "id": "EVD-39adodashboard-D3-022",
+      "project_id": "39-ado-dashboard",
+      "phase": "D3",
+      "story_id": "F39-UI-002",
+      "status": "passed",
+      "test_count": 1,
+      "test_passed": 1,
+      "coverage": null,
+      "timestamp": "2026-03-08T00:47:21.072Z",
+      "actor": "agent:veritas",
+      "source": "veritas-export",
+      "evidence_artifacts": [
+        {
+          "path": "src/index.ts",
+          "type": "code",
+          "is_test": false
+        },
+        {
+          "path": "src/pages/SprintBoardPage.test.tsx",
+          "type": "test",
+          "is_test": true
+        }
+      ],
+      "commit_refs": []
+    }
+  ],
+  "decisions": [],
+  "risks": [],
+  "summary": {
+    "wbs_count": 35,
+    "evidence_count": 22,
+    "decisions_count": 0,
+    "risks_count": 0,
+    "mti_score": null
+  }
+}

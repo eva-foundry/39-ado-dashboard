@@ -53,7 +53,7 @@ export const SprintBoardPage: React.FC<SprintBoardPageProps> = ({
     const projectIdMap: Record<string, string> = {
       "brain-v2": "33-eva-brain-v2",
       "faces": "31-eva-faces",
-      "agents": "34-eva-agents",
+      "agents": "63-factory-context-auditor",
       "data-model": "37-data-model",
       "ado-dashboard": "39-ado-dashboard",
       // Add more mappings as needed

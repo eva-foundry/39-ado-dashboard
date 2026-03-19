@@ -244,3 +244,14 @@ STORY F39-DASHBOARD-001: 100%
 STORY F39-SUMMARY-001: 100%
 STORY F39-UI-001: 100%
 STORY F39-UI-002: 100%
+
+
+---
+
+## 2026-03-03 -- Re-primed by agent:copilot
+
+<!-- eva-primed-status -->
+
+Data model: GET http://localhost:8010/model/projects/39-ado-dashboard
+29-foundry agents: C:\eva-foundry\eva-foundation\29-foundry\agents\
+48-eva-veritas: run audit_repo MCP tool

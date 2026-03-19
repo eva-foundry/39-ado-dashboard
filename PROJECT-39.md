@@ -1,7 +1,7 @@
 # PROJECT-39 — EVA ADO Dashboard
 
 **Project name:** `39-ado-dashboard`  
-**Folder:** `C:\AICOE\eva-foundation\39-ado-dashboard`  
+**Folder:** `C:\eva-foundry\eva-foundation\39-ado-dashboard`  
 **Status:** ✅ Scaffolding complete — 2026-02-20 10:55 ET  
 **Created by:** EVA ADO Command Center ROADMAP  
 **Date created:** 2026-02-20
@@ -215,7 +215,7 @@ The runner is dispatched from `38-ado-poc` via `ado-bootstrap-pull.ps1` once a F
 The [EVA Suite home page](https://marcopolo483.github.io/eva-suite) shows 23 products across 5 categories (User Products, AI Intelligence, Platform, Developer, Moonshot). The `39-ado-dashboard` `EVAHomePage.tsx` must eventually tile all of them with live ADO sprint badges. Each tile = one numbered `eva-foundation` project = one future ADO Epic.
 
 Current `eva-foundation` numbered projects (18 Epics to eventually register):
-`14-az-finops`, `15-cdc`, `16-engineered-case-law`, `17-apim`, `18-azure-best`, `19-ai-gov`, `20-AssistMe`, `24-eva-brain`, `29-foundry`, `30-ui-bench`, `31-eva-faces`, `33-eva-brain-v2`, `34-eva-agents`, `35-agentic-code-fixing`, `36-red-teaming`, `37-data-model`, `38-ado-poc`, `39-ado-dashboard`
+`14-az-finops`, `15-cdc`, `16-engineered-case-law`, `17-apim`, `18-azure-best`, `19-ai-gov`, `20-AssistMe`, `24-eva-brain`, `29-foundry`, `30-ui-bench`, `31-eva-faces`, `33-eva-brain-v2`, `63-factory-context-auditor`, `35-agentic-code-fixing`, `36-red-teaming`, `37-data-model`, `38-ado-poc`, `39-ado-dashboard`
 
 They will be imported into ADO one by one (each as a Feature or Epic under the main EVA Epic). Not all are active — some are complete, some are future. The home page badges will reflect that.
 

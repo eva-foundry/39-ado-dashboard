@@ -2,8 +2,8 @@
   "meta": {
     "schema": "eva.trust.v2",
     "generated_at": "2026-02-25T19:19:25.097Z",
-    "repo": "C:\\AICOE\\eva-foundation\\39-ado-dashboard",
-    "reconciliation_path": "C:\\AICOE\\eva-foundation\\39-ado-dashboard\\.eva\\reconciliation.json"
+    "repo": "C:\\eva-foundry\\eva-foundation\\39-ado-dashboard",
+    "reconciliation_path": "C:\\eva-foundry\\eva-foundation\\39-ado-dashboard\\.eva\\reconciliation.json"
   },
   "score": 86,
   "stale": false,

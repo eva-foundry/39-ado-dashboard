@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema": "eva.discovery.v2",
-    "generated_at": "2026-02-25T19:19:25.072Z",
-    "repo": "C:\\AICOE\\eva-foundation\\39-ado-dashboard"
+    "generated_at": "2026-03-08T00:47:16.201Z",
+    "repo": "C:\\eva-foundry\\eva-foundry\\39-ado-dashboard"
   },
   "project": null,
   "planned": {
     "epic": {
-      "title": "39-ado-dashboard — EVA ADO Dashboard",
+      "title": "39-ado-dashboard ? EVA ADO Dashboard",
       "source": "README.md"
     },
     "features": [
@@ -382,6 +382,11 @@
         "story_tags": []
       },
       {
+        "path": ".gitignore",
+        "type": "other",
+        "story_tags": []
+      },
+      {
         "path": "ACCEPTANCE.md",
         "type": "doc",
         "story_tags": []
@@ -402,8 +407,23 @@
         "story_tags": []
       },
       {
+        "path": "CODE_OF_CONDUCT.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
         "path": "DEPENDENCIES.md",
         "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "LICENSE",
+        "type": "other",
         "story_tags": []
       },
       {
@@ -433,6 +453,11 @@
       },
       {
         "path": "README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "SECURITY.md",
         "type": "doc",
         "story_tags": []
       },
@@ -467,6 +492,11 @@
         "story_tags": []
       },
       {
+        "path": ".github/copilot-skills/00-skill-index.skill.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
         "path": "src/index.ts",
         "type": "code",
         "story_tags": [
@@ -497,11 +527,6 @@
       {
         "path": "src/test-setup.ts",
         "type": "code",
-        "story_tags": []
-      },
-      {
-        "path": ".github/copilot-skills/00-skill-index.skill.md",
-        "type": "doc",
         "story_tags": []
       },
       {
