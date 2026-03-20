@@ -1,0 +1,85 @@
+name: "Factory CPM CP5 Dashboard Dry Run"
+
+on:
+  workflow_dispatch:
+    inputs:
+      packet_id:
+        description: "Project work packet identifier"
+        required: true
+        default: "39-ado-dashboard-cp5-operator-surfaces-2026-03-20"
+      workflow_definition_id:
+        description: "Workflow definition to inspect"
+        required: true
+        default: "factory_cp5_dashboard_operator_surfaces_v7"
+
+env:
+  DATA_MODEL_API: https://msub-eva-data-model.victoriousgrass-30debbd3.canadacentral.azurecontainerapps.io
+
+jobs:
+  dry-run:
+    name: "CP5 Dashboard Dry Run"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: "Checkout source"
+        uses: actions/checkout@v4
+
+      - name: "Query Dashboard bootstrap state"
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $stamp = (Get-Date).ToUniversalTime().ToString('yyyyMMdd_HHmmss')
+          $timestampUtc = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
+          $packetId = '${{ inputs.packet_id }}'
+          $workflowDefinitionId = '${{ inputs.workflow_definition_id }}'
+          New-Item -ItemType Directory -Path evidence -Force | Out-Null
+          New-Item -ItemType Directory -Path logs -Force | Out-Null
+
+          function Get-QueryCount {
+              param([string]$Layer, [hashtable]$Query)
+              $body = @{ layer = $Layer; query = $Query } | ConvertTo-Json -Depth 10
+              $response = Invoke-RestMethod "$env:DATA_MODEL_API/model/query" -Method Post -ContentType 'application/json' -Body $body -TimeoutSec 30
+              if ($null -ne $response.count) { return [int]$response.count }
+              if ($null -ne $response.results) { return @($response.results).Count }
+              return 0
+          }
+
+          $summary = [ordered]@{
+              timestamp_utc = $timestampUtc
+              project_id = '39-ado-dashboard'
+              dry_run = $true
+              packet_id = $packetId
+              workflow_definition_id = $workflowDefinitionId
+              note = 'Stub only queries live CP5 Dashboard bootstrap state. It does not mutate UI or projection data.'
+              counts = [ordered]@{
+                  project_work = Get-QueryCount -Layer 'project_work' -Query @{ id = $packetId }
+                  workflow_definitions = Get-QueryCount -Layer 'workflow_definitions' -Query @{ id = $workflowDefinitionId }
+                  workflow_stages = Get-QueryCount -Layer 'workflow_stages' -Query @{ workflow_definition_id = $workflowDefinitionId }
+                  workflow_runs = Get-QueryCount -Layer 'workflow_runs' -Query @{ workflow_definition_id = $workflowDefinitionId }
+                  workflow_gate_results = Get-QueryCount -Layer 'workflow_gate_results' -Query @{ workflow_definition_id = $workflowDefinitionId }
+                  workflow_signals = Get-QueryCount -Layer 'workflow_signals' -Query @{ workflow_definition_id = $workflowDefinitionId }
+              }
+          }
+
+          $evidencePath = "evidence/$stamp-factory-cpm-cp5-dashboard-dry-run.json"
+          $logPath = "logs/$stamp-log-factory-cpm-cp5-dashboard-dry-run.txt"
+          $summary | ConvertTo-Json -Depth 10 | Out-File -FilePath $evidencePath -Encoding utf8
+          @(
+              "[INFO] Factory CPM CP5 Dashboard dry run completed at $timestampUtc",
+              "[INFO] Packet: $packetId",
+              "[INFO] Workflow definition: $workflowDefinitionId",
+              "[INFO] project_work count: $($summary.counts.project_work)",
+              "[INFO] workflow_runs count: $($summary.counts.workflow_runs)"
+          ) | Set-Content -Path $logPath -Encoding utf8
+
+      - name: "Upload dry-run artifacts"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "factory-cpm-cp5-dashboard-dry-run"
+          path: |
+            evidence/*-factory-cpm-cp5-dashboard-dry-run.json
+            logs/*-factory-cpm-cp5-dashboard-dry-run.txt
+          retention-days: 30

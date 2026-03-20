@@ -31,6 +31,14 @@
       "description": "eva-brain endpoint GET /v1/scrum/dashboard calling ADO REST, shaping response, caching to Cosmos (TTL 24h). APIM registers route. Daily refresh via Logic App or scheduled Function.",
       "tags": "ado-dashboard;dash-apim-route",
       "parent": "epic"
+    },
+    {
+      "id_hint": "dash-thread-operations",
+      "type": "Feature",
+      "title": "Thread Graph and Operations Views",
+      "description": "Dashboard projections for thread graph, ready queue, critical path, blocked lanes, retries, and execution health. Read-only operator surface over 33 and 40 projections.",
+      "tags": "ado-dashboard;dash-thread-operations",
+      "parent": "epic"
     }
   ],
 
@@ -67,6 +75,39 @@
       "state": "New",
       "parent": "dash-spec",
       "evidence": { "test_count": null, "coverage_pct": null, "notes": "Depends on DASH-WI-1 for live data. Static/mock version can proceed independently." }
+    },
+    {
+      "id_hint": "dash-wi-3",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-3] Thread graph board — lanes, dependencies, and critical path",
+      "acceptance_criteria": "Dashboard renders a thread graph view showing dependent and independent lanes, edge relationships, and critical-path highlighting sourced from thread projection endpoints.",
+      "tags": "ado-dashboard;dash-thread-operations;dash-wi-3",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-thread-operations",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Primary visual projection for the approved control-plane thread model." }
+    },
+    {
+      "id_hint": "dash-wi-4",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-4] Ready queue and blocked lane views — operator projection",
+      "acceptance_criteria": "Dashboard shows ready queue, blocked lanes, blocker cause, and gate status without exposing raw runtime internals. Operators can see what can run now and what is stalled.",
+      "tags": "ado-dashboard;dash-thread-operations;dash-wi-4",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-thread-operations",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Supports control-plane operational awareness." }
+    },
+    {
+      "id_hint": "dash-wi-5",
+      "type": "Product Backlog Item",
+      "title": "[DASH-WI-5] Execution health summary — retries, evidence freshness, lane throughput",
+      "acceptance_criteria": "Dashboard summarizes runtime health by lane, retry count, evidence freshness, and throughput. Summary is sourced from 40-eva-control-plane aggregates and exposed via stable UI contracts.",
+      "tags": "ado-dashboard;dash-thread-operations;dash-wi-5",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "dash-thread-operations",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Keeps 39 as a projection surface rather than an orchestration engine." }
     }
   ],
 
